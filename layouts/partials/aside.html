@@ -1,6 +1,8 @@
 <aside id="sidenav">
     <header>
-    <a href="{{ .Site.BaseURL }}"><img src="/avatar.png" alt="avatar"></a>
+    {{if eq .Site.Params.useAvatar true}}
+        <a href="{{ .Site.BaseURL }}"><img src="/avatar.png" alt="avatar"></a>
+    {{end}}
     <a id="branding" href="{{ .Site.BaseURL }}">{{ .Site.Title | safeHTML }}</a>
     </header>
 
@@ -12,10 +14,19 @@
                     target="_blanck"
                 {{end}}
             >
-                {{ .Pre }}
+                {{with .Pre}}
+                    {{ .}}
+                {{else}}
+                    <i class="far fa-file far-sm"></i>
+                {{end}}
+
                 <span>{{ .Name }}</span>
             </a>
         {{end}}
+            <a href="/tags" >
+                <i class="fas fa-tags"></i>
+                <span>tags</span>
+            </a>
             <a href="/contact" >
                  <i class="far fa-envelope"></i>
                 <span>contact</span>

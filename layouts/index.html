@@ -1,8 +1,8 @@
 {{define "main"}}
-    {{if .Site.Params.displayRecent }}
+    {{if ne .Site.Params.displayRecent false}}
     <div class="section"> 
         <div class="section-title">recent</div> 
-        {{range first .Site.Params.recentMax (where .Site.RegularPages "Section" "ne" "posts")}}
+        {{range first (default  4 .Site.Params.recentMax) (where .Site.RegularPages "Section" "ne" "posts")}}
             <div class="list-item">
                 <a class="entry-title" href="{{ .URL }}">{{ .Title }}</a>
                 {{$page := .}}

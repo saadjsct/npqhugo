@@ -108,11 +108,11 @@ aside nav a:hover {
     font-size: 32px;
     margin-top: 10px;
     margin-bottom: 20px;
-    color: #E8E8E8;
+    color: rgb(188, 188, 196);
 }
 
 #npq{
-    color: #BFBFBF; 
+    color: rgb(119, 125, 143); 
 }
 
 #closebtn {
@@ -274,10 +274,14 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     padding: 30px;
     margin-top: 40px;
     border-top: 1px solid #3D3D3D;
     background-color:rgb(30, 34, 39) ;
+}
+.copyright{
+    text-align: center;
 }
 
 .contact-form {
@@ -313,9 +317,18 @@ footer{
 
 .contact-info {
     display: flex;
+    width: 100%;
     flex-direction: row;
     justify-content: space-around;
 }
+
+/* .footer-phone{
+    margin-left: 20px;
+}
+.footer-mail{
+    margin-right: 20px;
+
+} */
 
 @media only screen and (max-width: 650px){
     #sidenav {

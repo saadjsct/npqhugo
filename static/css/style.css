@@ -292,17 +292,30 @@ blockquote {
 }
 
 footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
     padding: 30px;
     margin-top: 40px;
     border-top: 1px solid #3D3D3D;
     background-color:rgb(30, 34, 39) ;
 }
+
+.footer-content{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .copyright{
     text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .contact-form {
@@ -336,12 +349,6 @@ footer{
     width: auto;
 }
 
-.contact-info {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-around;
-}
 
 /* .footer-phone{
     margin-left: 20px;
@@ -364,6 +371,20 @@ footer{
     .content {
         width : 95%;
         margin:0px auto auto auto;
+    }
+
+    .footer-content{
+        flex-direction: column;
+    }
+
+    .contact-info {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .footer-content{
+        width: 100%;
     }
 }
 

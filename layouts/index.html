@@ -3,7 +3,7 @@
     <div class="section"> 
         <div class="section-title">recent</div> 
         {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
-        {{range first (default  4 .Site.Params.recentMax) (where $pages "Section" "ne" "posts")}}
+        {{range first (default  4 .Site.Params.recentMax) (where $pages "Section" "ne" .Site.Params.microBlogSection)}}
             <div class="list-item">
                 <a class="entry-title" href="{{ .URL }}">{{ .Title }}</a>
                 {{$page := .}}

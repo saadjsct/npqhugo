@@ -21,12 +21,7 @@
                     target="_blanck"
                 {{end}}
             >
-                {{with .Pre}}
-                    {{ .}}
-                {{else}}
-                    <i class="far fa-file far-sm"></i>
-                {{end}}
-
+                {{ .Pre }}
                 <span>{{ .Name }}</span>
             </a>
         {{end}}

@@ -3,7 +3,14 @@
     {{if eq .Site.Params.useAvatar true}}
         <a href="{{ .Site.BaseURL }}"><img src="/avatar.png" alt="avatar"></a>
     {{end}}
-    <a id="branding" href="{{ .Site.BaseURL }}">{{ .Site.Title | safeHTML }}</a>
+
+    <a id="branding" href="{{ .Site.BaseURL }}">
+        {{with .Site.Params.logo}}
+            {{ . | safeHTML }}
+        {{else}}
+            {{ .Site.Title }}
+        {{end}}
+    </a>
     </header>
 
     <nav>

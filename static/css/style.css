@@ -185,9 +185,30 @@ button{
     word-break: break-word;
 }
 
+table {
+    border-collapse: collapse;
+}
+  
+table, th, td {
+    border: 1px solid rgb(97, 96, 96);
+}
+
+th, td {
+    padding: 5px 10px;
+}
+
+th {
+    background-color: rgb(48, 75, 102);
+}
+
+tr:nth-child(even) {
+    background-color: rgb(32, 32, 32);
+}
+
 h1, h2, h3 {
     border-bottom: 1px solid #3D3D3D;
 }
+
 #title {
     text-align: center;
     margin: 20px;

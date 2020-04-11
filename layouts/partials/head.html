@@ -1,0 +1,17 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{with .Site.Params.description -}}
+      <meta name="description" content="{{.}}">
+    {{ end }}
+    {{- with .Site.Params.author -}}
+      <meta name="Author" content="{{.}}">
+    {{ end }}
+    {{- with .Site.Params.keywords -}}
+      <meta name="keywords" content="{{.}}">
+    {{ end -}}
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/1b7478c139.js" crossorigin="anonymous"></script>
+    <title>{{ .Site.Title }}</title>
+  </head>

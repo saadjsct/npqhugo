@@ -1,0 +1,23 @@
+<aside id="sidenav">
+    <header>
+    <a href="{{ .Site.BaseURL }}"><img src="/avatar.png" alt="avatar"></a>
+    <a id="branding" href="{{ .Site.BaseURL }}">{{ .Site.Params.author | safeHTML }}</a>
+    </header>
+
+    <nav>
+        {{ range .Site.Menus.main }}
+            {{ $url := urls.Parse .URL }}		
+            <a href="{{ $url }}"
+                {{ if ne $url.Host ""}}
+                    target="_blanck"
+                {{end}}
+            >
+                {{ .Pre }}
+                <span>{{ .Name }}</span>
+            </a>
+        {{end}}
+            <a href="/contact" >
+                 <i class="far fa-envelope"></i>
+                <span>contact</span>
+            </a>
+</aside>

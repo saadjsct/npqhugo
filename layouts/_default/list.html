@@ -1,0 +1,24 @@
+{{ define "main" }}
+    <div class="section">
+        <dev class="section-title">{{.Section}}</dev>
+        {{range .Pages}}
+            <div class="list-item">
+                <a class="entry-title" href="{{ .URL }}">{{ .Title }}</a>
+                {{$page := .}}
+                {{with .Description}}
+                <p>{{.}}</p>
+                {{end}}
+                <div class="meta">
+                {{with .Date}}
+                    <i class="far fa-calendar-alt"></i> {{.Format "Jan 2 2006"}}
+                {{end}}
+                <br>
+                {{with .Params.tags}}
+                        <i class="fas fa-tags"></i> 
+                        Tags: {{ delimit . ", " }}
+                {{end}}
+                </div>
+            </div>
+        {{end}}
+    </div>
+{{end}}

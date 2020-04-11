@@ -1,0 +1,45 @@
+{{define "main"}}
+    {{if .Site.Params.displayRecent }}
+    <div class="section"> 
+        <div class="section-title">recent</div> 
+        {{range first .Site.Params.recentMax (where .Site.RegularPages "Section" "ne" "posts")}}
+            <div class="list-item">
+                <a class="entry-title" href="{{ .URL }}">{{ .Title }}</a>
+                {{$page := .}}
+                {{with .Description}}
+                <p>{{.}}</p>
+                {{end}}
+                <div class="meta">
+                {{with .Date}}
+                    <i class="far fa-calendar-alt"></i> {{.Format "Jan 2 2006"}}
+                {{end}}
+                <br>
+                {{with .Params.tags}}
+                        <i class="fas fa-tags"></i> 
+                        Tags: {{ delimit . ", " }}
+                {{end}}
+                </div>
+            </div>
+        {{end}}
+        </div>
+    {{end}}
+
+    {{if .Site.Params.displayMicroBlog}}
+    <div class="section"> 
+        <div class="section-title">μblog</div> 
+        <div class="posts">
+            {{ range where site.RegularPages "Type" "in" site.Params.microBlogSection}}
+                <div class="post">
+                    {{if ne .Params.pinned nil}}
+                        <div class="meta pinned"> <i class="fas fa-thumbtack"></i> pinned </div>
+                    {{end}}
+                    <div class="post-content">
+                        {{.Content}}
+                    </div>
+                    <div class="meta post-footer"> <span>{{.Date.Format "Jan 2 2006 03:04 UTC-07"}}</span> <a href="{{.URL}}"><i class="fas fa-link"></i> link</a></div> 
+                </div>
+            {{ end }} 
+        </div>
+    </div>
+    {{end}}
+{{end }}

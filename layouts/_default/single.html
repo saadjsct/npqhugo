@@ -1,0 +1,31 @@
+{{ define "main" }}
+    {{with .Title}}
+    <h1 id="title">{{.}}</h1>
+    {{else}}
+    <div class="spacer"></div>
+    {{end}}
+    {{ with .Params.githubrepo}}
+       github repository : <a href="{{.}}">{{.}}</a>
+    {{end}}  
+    {{.TableOfContents}}
+    {{.Content}}
+    {{if ne .Section ""}}
+    <div class="nav-next-prev">
+        <div class="nav-prev">
+            {{with .PrevInSection}}
+                <a href="{{.Permalink}}"><i class="fas fa-chevron-left"></i></a>
+            {{else}}
+                <a class="grayed-out" href="javascript:void()"><i class="fas fa-chevron-left"></i></a>
+            {{end}}
+        </div>
+        <a class="nav-top" href="#">top</i></a>
+        <div class="nav-next">
+            {{with .NextInSection}}
+                <a href="{{.Permalink}}"><i class="fas fa-chevron-right"></i></a>
+            {{else}}
+                <a class="grayed-out" href="javascript:void()"><i class="fas fa-chevron-right"></i></a>
+            {{end}}
+        </div>
+    </div>
+    {{end}}
+{{end}}

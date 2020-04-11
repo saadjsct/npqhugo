@@ -202,7 +202,7 @@ th {
 }
 
 tr:nth-child(even) {
-    background-color: rgb(32, 32, 32);
+    background-color: rgb(70, 69, 69);
 }
 
 h1, h2, h3 {

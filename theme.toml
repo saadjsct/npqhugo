@@ -1,0 +1,25 @@
+name = "npq hugo"
+license = "GPLv3"
+licenselink = "Link to theme's license"
+description = "Theme description"
+homepage = "Website of your theme"
+tags = ["blog", "company"]
+features = ["some", "awesome", "features"]
+min_version = "0.59.1"
+
+# If the theme has multiple authors
+authors = [
+  {name = "Name of author", homepage = "Website of author"},
+  {name = "Name of author", homepage = "Website of author"}
+]
+
+# If the theme has a single author
+[author]
+    name = "Your name"
+    homepage = "Your website"
+
+# If porting an existing theme
+[original]
+    author = "Name of original author"
+    homepage = "His/Her website"
+    repo = "Link to source code of original theme"

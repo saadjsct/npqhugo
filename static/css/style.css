@@ -299,7 +299,7 @@ footer{
 }
 
 .footer-content{
-    width: 60%;
+    width: 70%;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -358,7 +358,7 @@ footer{
 
 } */
 
-@media only screen and (max-width: 650px){
+@media only screen and (max-width: 700px){
     #sidenav {
         width: 0px;
     }
@@ -382,7 +382,7 @@ footer{
     }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
     .footer-content{
         width: 100%;
     }

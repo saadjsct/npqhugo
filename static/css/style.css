@@ -388,6 +388,13 @@ footer{
     }
 }
 
+@media only screen and (max-width: 420px) {
+    .contact-info{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 @media only screen and (min-width: 1200px) {
     .content {
         width : 70%;

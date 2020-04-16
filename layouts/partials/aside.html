@@ -1,10 +1,11 @@
 <aside id="sidenav">
     <header>
     {{if eq .Site.Params.useAvatar true}}
-        <a href="{{ .Site.BaseURL }}"><img src="/avatar.png" alt="avatar"></a>
+        <a href={{ "" | absURL }}><img src="{{ "avatar.png" | absURL }}" alt="avatar"></a>
+        
     {{end}}
 
-    <a id="branding" href="{{ .Site.BaseURL }}">
+    <a id="branding" href={{ "" | absURL }}>
         {{with .Site.Params.logo}}
             {{ . | safeHTML }}
         {{else}}

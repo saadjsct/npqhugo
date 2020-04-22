@@ -13,6 +13,7 @@ pygmentsUseClasses=true
   microBlogSection = "posts"
   displayMicroBlog = false
   displayRecent = true
+  displayHomeContent = false
   recentMax = 4
   mail = "mail@example.com"
   phone = "8888888888"

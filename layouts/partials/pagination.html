@@ -1,0 +1,32 @@
+{{ with $.Paginator }}
+{{ if gt .TotalPages 1 }}
+<ul class="pagination">
+  {{ with .Prev }}
+  <li class="page-item">
+    <a class="page-link" href="{{ .URL }}">
+      <i class="fas fa-chevron-left"></i>
+    </a>
+  </li>
+  {{ else }}
+  <li class="page-item">
+    <a class="grayed-out" href="javascript:void()">
+      <i class="fas fa-chevron-left"></i>
+    </a>
+  </li>
+  {{ end }}
+  {{ with .Next }}
+  <li class="page-item">
+    <a class="page-link" href="{{ .URL }}">
+      <i class="fas fa-chevron-right"></i>
+    </a>
+  </li>
+  {{ else }}
+  <li class="page-item">
+    <a class="grayed-out" href="javascript:void()">
+      <i class="fas fa-chevron-right"></i>
+    </a>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
+{{ end }}

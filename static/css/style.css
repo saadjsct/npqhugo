@@ -283,6 +283,19 @@ blockquote {
     padding-top: 30px;
     border-top: 1px solid #3D3D3D;
 }
+
+ul.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    font-size: 30px;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #3D3D3D;
+}
+
 .nav-top:hover{
    text-decoration: none;
 }

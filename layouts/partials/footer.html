@@ -1,16 +1,18 @@
 <footer>
 <div class="footer-content">
-<div class="contact-info">
-    {{with .Site.Params.mail}}
-        <div class="footer-mail">
-        <i class="far fa-envelope"></i> <a href="mailto:{{.}}">{{.}}</a> </div>
-    {{end}}
-    {{with .Site.Params.phone}}
-    <div class="footer-phone">
-        <i class="fas fa-phone"></i> {{.}} 
-    </div>
-    {{end}}
-</div>
+{{if (or (isset .Site.Params "mail") (isset .Site.Params "phone") ) }}
+  <div class="contact-info">
+      {{with .Site.Params.mail}}
+          <div class="footer-mail">
+          <i class="far fa-envelope"></i> <a href="mailto:{{.}}">{{.}}</a> </div>
+      {{end}}
+      {{with .Site.Params.phone}}
+      <div class="footer-phone">
+          <i class="fas fa-phone"></i> {{.}} 
+      </div>
+      {{end}}
+  </div>
+{{end}}
 {{with .Site.Copyright}}
 <p class="copyright meta">{{.}}</p>
 {{end}}

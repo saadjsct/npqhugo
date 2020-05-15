@@ -17,7 +17,7 @@ after you have installed hugo (see [quick start](https://gohugo.io/getting-start
 
 ```sh
 git clone https://github.com/saadnpq/npq-hugo.git
-cp npq-hugo/config.toml .
+cp npq-hugo/example-config.toml .
 ```
 
 ## configuration 

@@ -87,5 +87,15 @@ In order to see your site updating while changing it, run Hugo's built-in local 
 hugo server
 ```
 
+### micro blog
+posts in the directory "posts" (can be configured) in the contents directory will be displayed under the microblog section on the home page. if you want to pin a post to the top put `pinned: true` in the post's front matter.
+example front matter: 
+```
+---
+pinned: true
+date: 2020-04-09T00:16:00+02:00
+---
+```
+
 ## License
 GPLv3

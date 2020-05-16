@@ -3,7 +3,7 @@
 ![screenshot](https://raw.githubusercontent.com/saadnpq/npq-hugo/master/images/screenshot.png "screenshot")
 
 ## demo
-here is a live demo you can see (https://themes.gohugo.io/theme/npq-hugo/)
+[here](https://themes.gohugo.io/theme/npq-hugo/) is a live demo you can see
 
 ## main features
 - dark

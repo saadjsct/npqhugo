@@ -19,11 +19,12 @@
             {{ $url := urls.Parse .URL }}		
             <a href="{{ $url }}"
                 {{ if ne $url.Host ""}}
-                    target="_blanck"
+                    target="_blank"
                 {{end}}
             >
                 {{ .Pre }}
                 <span>{{ .Name }}</span>
             </a>
         {{end}}
+    </nav>
 </aside>

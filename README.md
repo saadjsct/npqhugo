@@ -2,13 +2,15 @@
 
 ![screenshot](https://raw.githubusercontent.com/saadnpq/npq-hugo/master/images/screenshot.png "screenshot")
 
+## demo
+here is a live demo you can see (https://themes.gohugo.io/theme/npq-hugo/)
+
 ## main features
 - dark
 - responsive
 - out of the box contact form
 - avatar support
 - syntax highlighting
-- font awesome
 - table of content
 - customizable
 

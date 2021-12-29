@@ -3,7 +3,7 @@
 <ul class="pagination">
   {{ with .Prev }}
   <li class="page-item">
-    <a class="page-link" href="{{ .Permalink }}">
+    <a class="page-link" href="{{ .URL }}">
       <i class="fas fa-chevron-left"></i>
     </a>
   </li>
@@ -16,7 +16,7 @@
   {{ end }}
   {{ with .Next }}
   <li class="page-item">
-    <a class="page-link" href="{{ .Permalink }}">
+    <a class="page-link" href="{{ .URL }}">
       <i class="fas fa-chevron-right"></i>
     </a>
   </li>

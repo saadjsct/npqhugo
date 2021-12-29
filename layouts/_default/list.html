@@ -3,7 +3,7 @@
         <dev class="section-title">{{.Section}}</dev>
         {{ range $index, $element := .Paginator.Pages }}
             <div class="list-item">
-                <a class="entry-title" href="{{ .URL }}">{{ .Title }}</a>
+                <a class="entry-title" href="{{ .Permalink }}">{{ .Title }}</a>
                 {{$page := .}}
                 {{with .Description}}
                 <p>{{.}}</p>

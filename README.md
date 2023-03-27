@@ -15,12 +15,7 @@
 - customizable
 
 ## installation
-after you have installed hugo (see [quick start](https://gohugo.io/getting-started/quick-start/)) run the following in your site's root directory to install the theme
-
-```sh
-git clone https://github.com/saadnpq/npq-hugo.git
-cp npq-hugo/example-config.toml .
-```
+after you have installed hugo (see [quick start](https://gohugo.io/getting-started/quick-start/)) clone this repo in your site's theme directory to install the theme. then use the example configuration provided as a reference to get started.
 
 ## configuration 
 this is how your config.toml will look like after installation, change the values according to your site. 
